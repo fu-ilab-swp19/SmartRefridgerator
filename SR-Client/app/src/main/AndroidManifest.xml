@@ -34,6 +34,7 @@
         <activity android:name=".DefineProduct"/>
         <activity android:name=".ChooseItemTypeActivity"/>
         <activity android:name=".AddItemActivity"/>
+        <activity android:name=".DisplayItemsActivity"/>
     </application>
 
 </manifest>

@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity
             startActivity(myIntent);
 
         }else if (id == R.id.nav_display_all) {
+            Intent myIntent = new Intent(getBaseContext(),   DisplayItemsActivity.class);
+            startActivity(myIntent);
 
         } else if (id == R.id.nav_share) {
 
