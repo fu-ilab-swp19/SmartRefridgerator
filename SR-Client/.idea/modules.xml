@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SmartRefrigerator.iml" filepath="$PROJECT_DIR$/SmartRefrigerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SR-Client.iml" filepath="$PROJECT_DIR$/SR-Client.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
