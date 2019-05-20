@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="30dp"
+    android:paddingRight="20dp">
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textViewLabel4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item ID"
+                android:textSize="25dp"
+                android:layout_column="1"
+                android:layout_weight="0.2"/>
+
+            <TextView
+                android:id="@+id/textViewItemId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textSize="25dp"
+                android:layout_column="2"
+                android:layout_weight="2"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textViewLabel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item name"
+                android:textSize="25dp"
+                android:layout_column="1"
+                android:layout_weight="0.2"/>
+
+            <TextView
+                android:id="@+id/textViewItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item name"
+                android:textSize="25dp"
+                android:layout_column="2"
+                android:layout_weight="2"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textViewLabel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="25dp"
+                android:layout_column="1"
+                android:layout_weight="0.2"/>
+
+            <TextView
+                android:id="@+id/textViewItemDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item description"
+                android:textSize="25dp"
+                android:layout_column="2"
+                android:layout_weight="2"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textViewLabel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+                android:textSize="25dp"
+                android:layout_column="1"
+                android:layout_weight="0.2"/>
+            S
+            <TextView
+                android:id="@+id/textViewItemBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="brand"
+                android:textSize="25dp"
+                android:layout_column="2"
+                android:layout_weight="2"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textViewLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shelf No."
+                android:textSize="25dp"
+                android:layout_column="1"
+                android:layout_weight="0"/>
+
+            <TextView
+                android:id="@+id/textViewLabelShelfNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shelf No."
+                android:textSize="25dp"
+                android:layout_column="2"
+                android:layout_weight="2"/>
+
+
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="35dp">
+
+            <SeekBar
+                android:id="@+id/seekBarShelfNumber"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="2"
+                android:progress="1"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textViewLabelExpirationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expiration Date"
+                android:textSize="25dp"
+                android:layout_column="1"
+                android:layout_weight="0"/>
+
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date"
+                android:layout_column="1"
+                android:layout_weight="1"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonAddItem"
+        android:layout_width="350dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="200px"
+        android:background="@drawable/mybutton"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"
+        android:text="Add Item" />
+
+
+
+
+</android.widget.LinearLayout>

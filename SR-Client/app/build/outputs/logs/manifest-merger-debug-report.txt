@@ -1,0 +1,219 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+MERGED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\37248ffcbf8e6c5fed0e2901b0444486\AndroidManifest.xml:2:1-11:12
+MERGED from [me.dm7.barcodescanner:zxing:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\7443af3ad66217080ba447a2343c0b0b\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\84af94e1d0328acb821f17dabe6f8bb7\AndroidManifest.xml:16:1-19:12
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:17:1-28:12
+MERGED from [me.dm7.barcodescanner:core:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\13ad7f9104e448d600e911f3570090c7\AndroidManifest.xml:2:1-13:12
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+	package
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:1-39:12
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:5:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:7:5-60
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:7:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:8:5-70
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:8:19-67
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:10:5-80
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:10:22-77
+application
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:12:5-37:19
+MERGED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\37248ffcbf8e6c5fed0e2901b0444486\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\37248ffcbf8e6c5fed0e2901b0444486\AndroidManifest.xml:9:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\7443af3ad66217080ba447a2343c0b0b\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\7443af3ad66217080ba447a2343c0b0b\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:22:5-26:19
+MERGED from [me.dm7.barcodescanner:core:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\13ad7f9104e448d600e911f3570090c7\AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\13ad7f9104e448d600e911f3570090c7\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:25:5-29:19
+	android:supportsRtl
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:18:9-40
+activity#com.fub.smart.MainActivity
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:20:9-23:59
+	android:label
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:22:13-45
+	android:theme
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:23:13-56
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:21:13-41
+activity#com.fub.smart.SplashScreenActivity
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:24:9-32:20
+	android:theme
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:26:13-53
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:25:13-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:30:27-74
+activity#com.fub.smart.ScannerActivity
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:33:9-53
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:33:19-50
+activity#com.fub.smart.DefineProduct
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:34:9-50
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:34:19-48
+activity#com.fub.smart.ChooseItemTypeActivity
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:35:9-59
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:35:19-57
+activity#com.fub.smart.AddItemActivity
+ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:36:9-52
+	android:name
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml:36:19-50
+uses-sdk
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\37248ffcbf8e6c5fed0e2901b0444486\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\37248ffcbf8e6c5fed0e2901b0444486\AndroidManifest.xml:5:5-7:41
+MERGED from [me.dm7.barcodescanner:zxing:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\7443af3ad66217080ba447a2343c0b0b\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\7443af3ad66217080ba447a2343c0b0b\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\84af94e1d0328acb821f17dabe6f8bb7\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\84af94e1d0328acb821f17dabe6f8bb7\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:20:5-44
+MERGED from [me.dm7.barcodescanner:core:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\13ad7f9104e448d600e911f3570090c7\AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.8.4] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\13ad7f9104e448d600e911f3570090c7\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Wessam\AndroidStudioProjects\SmartRefrigerator\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\8c8e20e9fc7a3aac67866c56fe86374f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\c9677b201f78571a54f0c4da92cdc659\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\e32c98b7f46f077e70dd42eaa8789c1e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\6f3cfae8aff1ecc7caa9c6d2a5c84f45\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\136f91b279940e64d0bedee75b29bba2\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\5369efd69c0a4572b80c98c80e6e6101\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\77e59e5c659a48bfcf17bf99a0a131fe\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\fc74f75ff6c481a41c5f19a05bcaf79b\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\385f31188537d49d45ba411f5e1d9d1f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bfc4d70e19e1304554c90313d01a1e43\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\bf64d216cccdd00016e9bedab98dc983\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.0.0] C:\Users\Wessam\.gradle\caches\transforms-2\files-2.1\b153e7110c7c66fca54a52171cc82d4a\AndroidManifest.xml:27:13-51
