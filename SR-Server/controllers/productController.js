@@ -9,7 +9,7 @@ module.exports={
 
     
        return Product.findAll().then(products => {
-           //
+           //test
             res.json(products)
 
        });
