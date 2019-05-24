@@ -9,8 +9,7 @@ module.exports={
 
     
        return Product.findAll().then(products => {
-
-            
+           //
             res.json(products)
 
        });
