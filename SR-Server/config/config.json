@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "sr_db",
+    "host": "localhost",
+    "port":8889,
+    "dialect": "mysql",
+    "socketPath":"Applications/MAMP/tmp/mysql/mysql.sock"
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "sr_db",
+    "host": "localhost",
+    "port":8889,
+    "dialect": "mysql",
+    "socketPath":"Applications/MAMP/tmp/mysql/mysql.sock"
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "sr_db",
+    "host": "localhost",
+    "port":8889,
+    "dialect": "mysql",
+    "socketPath":"Applications/MAMP/tmp/mysql/mysql.sock"
+  }
+}
