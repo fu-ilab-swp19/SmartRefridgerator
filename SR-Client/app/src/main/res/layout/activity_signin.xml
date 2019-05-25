@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+
+    <EditText
+        android:id="@+id/editTextSignInUserName"
+        android:layout_width="150pt"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_gravity="center"
+        android:layout_marginTop="140pt"
+        android:textColor="#ffff"
+        android:text="Email or username" />
+
+    <EditText
+        android:id="@+id/editTextSignINPassword"
+        android:layout_width="150pt"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textWebPassword"
+        android:textColor="#ffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="10pt"
+        android:text="Name" />
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="150pt"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10pt"
+        android:background="@drawable/mybutton"
+        android:textColor="#ffff"
+        android:onClick="signin"
+        android:text="Sign in" />
+    <View android:layout_weight="1"
+          android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        />
+    <TextView
+        android:id="@+id/textViewRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:paddingLeft="10pt"
+        android:paddingBottom="10pt"
+        android:text="I don't have an account"
+        android:textColor="#ffff"
+        android:clickable="true"
+        android:onClick="createAccount"/>
+
+</LinearLayout>

@@ -35,6 +35,8 @@
         <activity android:name=".ChooseItemTypeActivity"/>
         <activity android:name=".AddItemActivity"/>
         <activity android:name=".DisplayItemsActivity"/>
+        <activity android:name=".SignInActivity"/>
+        <activity android:name=".SignUpActivity"/>
     </application>
 
 </manifest>
