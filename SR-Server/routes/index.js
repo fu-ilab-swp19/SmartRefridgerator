@@ -2,6 +2,7 @@
 
 
 const productController=require('../controllers').productController
+const notificationController=require('../controllers').notificationController
 
 module.exports = (app)=>{
   app.get('/api', (req, res) => res.status(200).send({
@@ -20,5 +21,7 @@ module.exports = (app)=>{
   app.get('/api/products',productController.getAllProducts);
 
   app.post('/api/product',productController.defineProduct);
+
+  app.get('/api/notification',notificationController.test);
 
 };

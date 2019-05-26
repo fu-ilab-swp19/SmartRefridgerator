@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750053291324",
+    "firebase_url": "https://smart-refrigerator-504ce.firebaseio.com",
+    "project_id": "smart-refrigerator-504ce",
+    "storage_bucket": "smart-refrigerator-504ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750053291324:android:5121990aa609d5cc",
+        "android_client_info": {
+          "package_name": "com.fub.smart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750053291324-t2a02k2isibbq6gqcv6d9p2h851l5eq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP4nIjH6T8_qy9Y8v9y3XtPOYr_H6xwfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750053291324-t2a02k2isibbq6gqcv6d9p2h851l5eq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
