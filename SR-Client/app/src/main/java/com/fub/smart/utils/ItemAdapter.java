@@ -33,6 +33,11 @@ public class ItemAdapter extends RecyclerView.Adapter  {
         Item data=(Item)itemDataList.get(i);
         myViewHolder.name.setText(data.getItemName());
         myViewHolder.brand.setText(String.valueOf(data.getItemBrand()));
+        myViewHolder.amount.setText(data.getItemAmount());
+        myViewHolder.shelf.setText(String.valueOf(data.getItemShelf()));
+        myViewHolder.desc.setText(data.getItemDesc());
+        myViewHolder.expireDate.setText(data.getItemExpireDate());
+
     }
 
     @Override
@@ -41,11 +46,15 @@ public class ItemAdapter extends RecyclerView.Adapter  {
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name,brand;
+        TextView name,brand,amount,shelf,expireDate,desc;
         public MyViewHolder(View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.name);
-            brand=itemView.findViewById(R.id.brand);
+            name=itemView.findViewById(R.id.itemName);
+            brand=itemView.findViewById(R.id.itemBrand);
+            amount=itemView.findViewById(R.id.itemAmount);
+            shelf=itemView.findViewById(R.id.itemShelf);
+            expireDate= itemView.findViewById(R.id.itemExpireDate);
+            desc=itemView.findViewById(R.id.itemDesc);
         }
     }
 }

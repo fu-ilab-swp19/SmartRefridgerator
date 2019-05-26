@@ -114,11 +114,19 @@ public class MainActivity extends AppCompatActivity
 
         }else if (id == R.id.nav_display_all) {
             Intent myIntent = new Intent(getBaseContext(),   DisplayItemsActivity.class);
+            myIntent.putExtra("listType",1);
             startActivity(myIntent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_items_expiration) {
+            Intent myIntent = new Intent(getBaseContext(),   DisplayItemsActivity.class);
+            myIntent.putExtra("listType",2);
+            startActivity(myIntent);
 
-        } else if (id == R.id.nav_send) {
+
+        } else if (id == R.id.nav_items_out_stock) {
+            Intent myIntent = new Intent(getBaseContext(),   DisplayItemsActivity.class);
+            myIntent.putExtra("listType",3);
+            startActivity(myIntent);
 
         }
 
