@@ -14,12 +14,12 @@
 
 
         <EditText
-            android:id="@+id/editTextProductID"
+            android:id="@+id/editTextDefineProductID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Product ID"
+            android:hint="Product ID"
             android:textSize="60px"
             android:layout_marginTop="50px"
             android:enabled="false"
@@ -28,33 +28,45 @@
 
 
         <EditText
-            android:id="@+id/editTextProductTitle"
+            android:id="@+id/editTextDefineProductName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Title"
+            android:hint="Name"
             android:textSize="60px"
             android:layout_marginTop="50px"
-            android:editable="false"
             android:layout_marginLeft="50px"
             android:layout_marginRight="50px"/>
 
+
         <EditText
-            android:id="@+id/editTextProductBrand"
+            android:id="@+id/editTextDefineProductBrand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Brand"
+            android:hint="Brand"
             android:textSize="60px"
             android:layout_marginTop="50px"
-            android:editable="false"
             android:layout_marginLeft="50px"
             android:layout_marginRight="50px"/>
 
         <EditText
-            android:id="@+id/editTextProductDescription"
+            android:id="@+id/editTextDefineProductThreshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Threshold"
+            android:layout_marginTop="50px"
+            android:layout_marginLeft="50px"
+            android:layout_marginRight="50px"
+            />
+
+
+        <EditText
+            android:id="@+id/editTextDefineProductDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50px"
@@ -63,7 +75,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:text="Description"
+            android:hint="Description"
             android:textSize="60px"/>
 
         <LinearLayout
@@ -103,6 +115,7 @@
             android:background="@drawable/mybutton"
             android:textColor="#ffffff"
             android:layout_gravity="center_horizontal"
+            android:onClick="defineProduct"
             android:text="Add" />
 
 

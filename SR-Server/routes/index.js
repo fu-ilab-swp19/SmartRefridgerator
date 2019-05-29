@@ -7,25 +7,20 @@ const userController=require('../controllers').userController
 
 module.exports = (app)=>{
   app.get('/api', (req, res) => res.status(200).send({
-    message: 'Welcome to iav.',
+    message: 'Welcome to Smart Refrigerator.',
   }));
   
-  /* app.get('/api/projects',projectController.getAll);
+ 
 
-  //app.get('/api/tests/:projectId',testController.getTestsOfProject(req.params.projectId));
-
-  app.get('/api/tests/:projectId',testController.getTestsOfProject);
-
-
-  app.post('/api/test',testController.submitModuleTest); */
-
+  // product api
   app.get('/api/products',productController.getAllProducts);
-
   app.post('/api/product',productController.defineProduct);
 
-  app.get('/api/notification',notificationController.test);
-
+  //user api
   app.post('/api/user',userController.registerUser);
   app.post('/api/user/authenticate',userController.authenticate);
+
+  //notification api
+  app.get('/api/notification',notificationController.test);
 
 };

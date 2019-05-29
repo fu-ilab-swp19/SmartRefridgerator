@@ -4,13 +4,13 @@ module.exports = (sequelize, DataTypes) => {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: false
     },
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     brand: DataTypes.STRING,
     threshold: DataTypes.STRING,
-    image: DataTypes.STRING
+    image: DataTypes.STRING   
 
 
 

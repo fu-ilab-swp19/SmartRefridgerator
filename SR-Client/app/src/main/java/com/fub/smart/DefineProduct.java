@@ -23,6 +23,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.fub.smart.utils.SmartRefrigerator;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -31,7 +41,7 @@ import java.io.OutputStream;
 
 public class DefineProduct extends AppCompatActivity {
 
-    EditText productIdEditText;
+    EditText productIdEditText,productName,productDescription,productBrand,productThreshold;
     ImageView viewImage;
     Button addProductImage;
 
@@ -49,7 +59,12 @@ public class DefineProduct extends AppCompatActivity {
         });
 
         String productId= getIntent().getExtras().getString("scanResult");
-        productIdEditText=(EditText)findViewById(R.id.editTextProductID);
+        productIdEditText=findViewById(R.id.editTextDefineProductID);
+        productName=findViewById(R.id.editTextDefineProductName);
+        productBrand=findViewById(R.id.editTextDefineProductBrand);
+        productThreshold=findViewById(R.id.editTextDefineProductThreshold);
+        productDescription=findViewById(R.id.editTextDefineProductDescription);
+
         productIdEditText.setText(productId);
 
 
@@ -60,6 +75,46 @@ public class DefineProduct extends AppCompatActivity {
             } else {
                 requestPermissions();
             }
+        }
+
+    }
+
+    public void defineProduct(View v){
+        String URL = com.fub.smart.utils.Environment.SERVER_URL + "product";
+        JSONObject jsonBody = new JSONObject();
+        try {
+            jsonBody.put("id", productIdEditText.getText());
+            jsonBody.put("name", productName.getText());
+            jsonBody.put("brand", productBrand.getText());
+            jsonBody.put("threshold", productThreshold.getText());
+            jsonBody.put("description", productDescription.getText());
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+                    URL, jsonBody, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+
+                    try {
+                        if(response.getString("result").equals("success")) {
+                            Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
+                            startActivity(myIntent);
+                        }
+                        else {
+                            Toast.makeText(DefineProduct.this, response.getString("msg"), Toast.LENGTH_LONG).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.e("Error: ", error.getMessage());
+                }
+            });
+
+            SmartRefrigerator.getInstance().addToRequestQueue(jsonObjReq, "defineProductRequest");
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
     }

@@ -19,14 +19,15 @@ module.exports={
 
 
         return  Product.create({
+            id:req.body.id,
             name:req.body.name,
-            description:req.body.description,
             brand:req.body.brand,
-            threshold:"dsdsdsdsd",
+            threshold:req.body.threshold,
+            description:req.body.description
 
         }).then(res.json(
 
-            {result:'success'}
+            {result:'success',msg:'product created successfully'}
 
         ));
 
