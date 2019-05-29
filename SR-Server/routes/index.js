@@ -26,6 +26,6 @@ module.exports = (app)=>{
   app.get('/api/notification',notificationController.test);
 
   app.post('/api/user',userController.registerUser);
-  app.get('/api/user',userController.authenticate);
+  app.post('/api/user/authenticate',userController.authenticate);
 
 };
