@@ -2,6 +2,7 @@
 //const Test = require('../models').Test;
 
 const Product =require('../models').Product;
+const ProductUser =require('../models').ProductUser;
 
 module.exports={
 
@@ -14,6 +15,21 @@ module.exports={
 
        });
     
+    },
+
+    getProduct(req,res){
+        return Product.findOne({ where: {id:req.params.productId} }).then(prod => {
+            if(prod==null)
+            {
+                res.json( {result:"failed",msg:'Product is not defined'});
+            }
+            else
+            {
+                var finalResult={result:"success",product:prod};
+                res.json(finalResult);
+            }
+ 
+        });
     },
     defineProduct(req,res){
 
@@ -30,6 +46,34 @@ module.exports={
             {result:'success',msg:'product created successfully'}
 
         ));
+
+    },
+
+    addProductInFridge(req,res){
+        
+
+        return ProductUser.destroy({
+            where: {
+                UserId:req.body.userId,
+                shelfNum:req.body.shelfNum
+            }
+        }).then(res.json(
+
+                ProductUser.create({
+                ProductId:req.body.productId,
+                UserId:req.body.userId,
+                shelfNum:req.body.shelfNum,
+                expirationDate:req.body.expirationDate
+    
+            }).then(res.json(
+    
+                {result:'success',msg:'Product added successfully'}
+    
+            ))
+
+        ));
+
+        
 
     },
 

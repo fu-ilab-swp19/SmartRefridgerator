@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     shelfNum: DataTypes.INTEGER,
-    expairationDate: DataTypes.STRING,
+    expirationDate: DataTypes.STRING,
     amount:DataTypes.INTEGER
 
   }, {});

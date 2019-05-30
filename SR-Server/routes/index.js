@@ -14,7 +14,9 @@ module.exports = (app)=>{
 
   // product api
   app.get('/api/products',productController.getAllProducts);
+  app.get('/api/product/:productId',productController.getProduct);
   app.post('/api/product',productController.defineProduct);
+  app.post('/api/addproduct/mobile',productController.addProductInFridge);
 
   //user api
   app.post('/api/user',userController.registerUser);
