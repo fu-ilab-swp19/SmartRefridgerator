@@ -18,6 +18,8 @@ module.exports = (app)=>{
   app.post('/api/product',productController.defineProduct);
   app.post('/api/addproduct/mobile',productController.addProductInFridge);
 
+  app.post('/api/addproduct/controller/:shelfId/:amount',productController.updateProductInFridge);
+
   //user api
   app.post('/api/user',userController.registerUser);
   app.post('/api/user/authenticate',userController.authenticate);
