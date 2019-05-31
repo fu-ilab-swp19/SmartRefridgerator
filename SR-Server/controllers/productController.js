@@ -76,6 +76,13 @@ module.exports={
         
 
     },
+    updateProductInFridge(req,res){
+    
+        console.log(req.params); 
+
+        return res.json({result:"sucess"});
+    
+    }
 
 
    
