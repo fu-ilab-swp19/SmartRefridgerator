@@ -4,6 +4,10 @@
 const Product =require('../models').Product;
 const ProductUser =require('../models').ProductUser;
 
+const Sequelize = require('sequelize');
+const op = Sequelize.Op;
+
+
 module.exports={
 
     getAllProducts(req, res) {
@@ -82,6 +86,61 @@ module.exports={
 
         return res.json({result:"sucess"});
     
+    },
+    getMyProducts(req,res){
+
+        return ProductUser.findAll({
+            include: [{ model: Product}],
+            where:{amount:{ [op.ne]: null },UserId:req.params.userId}
+        }).then(result => {
+             res.json(result)
+ 
+        });
+    },
+    getMyProductsNearExpire(req,res){
+
+        var date = new Date();
+        date.setDate(date.getDate() + 7);
+        
+        return ProductUser.findAll({
+            include: [{ model: Product}],
+            where:{
+
+                amount:{ [op.ne]: null },
+                expirationDate:{ [op.lte]: date },
+                UserId:req.params.userId
+            }
+        }).then(result => {
+             res.json(result)
+ 
+        });
+
+    },
+    getMyProductsOutOfStock(req,res){
+
+        
+        return ProductUser.findAll({
+            include: 
+                { 
+                    model: Product,as:'Product',
+                    where:{threshold:{ [op.gt]: Sequelize.literal('amount')}  ,}
+        
+                 }
+        
+            ,
+            where:
+            {
+                amount:{ [op.ne]: null },
+                
+                
+                UserId:req.params.userId,
+
+           }
+        }).then(result => {
+             res.json(result)
+ 
+        });
+   
     }
 
 

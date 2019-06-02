@@ -17,8 +17,12 @@ module.exports = (app)=>{
   app.get('/api/product/:productId',productController.getProduct);
   app.post('/api/product',productController.defineProduct);
   app.post('/api/addproduct/mobile',productController.addProductInFridge);
+  
+  app.get('/api/myproducts/:userId',productController.getMyProducts);
+  app.get('/api/myproducts/expire/:userId',productController.getMyProductsNearExpire);
+  app.get('/api/myproducts/outstock/:userId',productController.getMyProductsOutOfStock);
 
-  app.post('/api/addproduct/controller/:shelfId/:amount',productController.updateProductInFridge);
+  app.get('/api/addproduct/controller/:shelfId/:amount',productController.updateProductInFridge);
 
   //user api
   app.post('/api/user',userController.registerUser);

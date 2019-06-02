@@ -2,14 +2,14 @@
 module.exports = (sequelize, DataTypes) => {
   const Product = sequelize.define('Product', {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       primaryKey: true,
       autoIncrement: false
     },
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     brand: DataTypes.STRING,
-    threshold: DataTypes.STRING,
+    threshold: DataTypes.INTEGER,
     image: DataTypes.STRING   
 
 

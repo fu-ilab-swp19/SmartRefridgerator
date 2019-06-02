@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     shelfNum: DataTypes.INTEGER,
-    expirationDate: DataTypes.STRING,
+    expirationDate: DataTypes.DATE,
     amount:DataTypes.INTEGER
 
   }, {});
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   ProductUser.associate = function(models) {
     // associations can be defined here
     ProductUser.belongsTo(models.Product,{
-      forigenKey:'productId'
+      forigenKey:'productId',
     
     });
 
