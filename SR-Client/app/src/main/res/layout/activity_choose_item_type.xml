@@ -28,7 +28,7 @@
             />
 
         <ImageView
-            android:id="@+id/viewImageFish"
+            android:id="@+id/viewImageFish-1"
             android:layout_width="130dp"
             android:layout_height="140dp"
             android:src="@drawable/ci_fish"
@@ -36,9 +36,12 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="1"
+            android:onClick="onClick"
             />
+
         <ImageView
-            android:id="@+id/viewImageMeat"
+            android:id="@+id/viewImageMeat-2"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_meat"
@@ -46,6 +49,8 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="2"
+            android:onClick="onClick"
             />
 
     </TableRow>
@@ -57,7 +62,7 @@
         android:layout_marginTop="1dp">
 
         <ImageView
-            android:id="@+id/viewImageApple"
+            android:id="@+id/viewImageApple-3"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_apple"
@@ -65,10 +70,12 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="3"
+            android:onClick="onClick"
             />
 
         <ImageView
-            android:id="@+id/viewImageKiwi"
+            android:id="@+id/viewImageKiwi-4"
             android:layout_width="130dp"
             android:layout_height="140dp"
             android:src="@drawable/ci_kiwi"
@@ -76,9 +83,11 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="4"
+            android:onClick="onClick"
             />
         <ImageView
-            android:id="@+id/viewImageStrawberry"
+            android:id="@+id/viewImageStrawberry-5"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_strawberry"
@@ -86,6 +95,8 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="5"
+            android:onClick="onClick"
             />
 
     </TableRow>
@@ -97,7 +108,7 @@
         android:layout_marginTop="1dp">
 
         <ImageView
-            android:id="@+id/viewImageTrauben"
+            android:id="@+id/viewImageTrauben-6"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_trauben"
@@ -105,10 +116,12 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="6"
+            android:onClick="onClick"
             />
 
         <ImageView
-            android:id="@+id/viewImageCherry"
+            android:id="@+id/viewImageCherry-7"
             android:layout_width="130dp"
             android:layout_height="140dp"
             android:src="@drawable/ci_cherry"
@@ -116,9 +129,11 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="7"
+            android:onClick="onClick"
             />
         <ImageView
-            android:id="@+id/viewImageOrange"
+            android:id="@+id/viewImageOrange-8"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_orange"
@@ -126,6 +141,8 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="8"
+            android:onClick="onClick"
             />
 
     </TableRow>
@@ -137,7 +154,7 @@
         android:layout_marginTop="1dp">
 
         <ImageView
-            android:id="@+id/viewImageKnoblauf"
+            android:id="@+id/viewImageKnoblauf-9"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_knoblauf"
@@ -145,10 +162,12 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="9"
+            android:onClick="onClick"
             />
 
         <ImageView
-            android:id="@+id/viewImageOnion"
+            android:id="@+id/viewImageOnion-10"
             android:layout_width="130dp"
             android:layout_height="140dp"
             android:src="@drawable/ci_onion"
@@ -156,9 +175,11 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="10"
+            android:onClick="onClick"
             />
         <ImageView
-            android:id="@+id/viewImageOberjene"
+            android:id="@+id/viewImageOberjene-11"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_oberjene"
@@ -166,6 +187,8 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="11"
+            android:onClick="onClick"
             />
 
     </TableRow>
@@ -178,7 +201,7 @@
         android:layout_marginTop="1dp">
 
         <ImageView
-            android:id="@+id/viewImageAvokado"
+            android:id="@+id/viewImageAvokado-12"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_avokado"
@@ -186,19 +209,24 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="12"
+            android:onClick="onClick"
             />
 
         <ImageView
-            android:id="@+id/viewImageGurken"
+            android:id="@+id/viewImageGurken-13"
             android:layout_width="130dp"
             android:layout_height="140dp"
             android:background="@drawable/item"
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
-            android:src="@drawable/ci_gurken" />
+            android:src="@drawable/ci_gurken"
+            android:tag="13"
+            android:onClick="onClick"
+            />
         <ImageView
-            android:id="@+id/viewImagePaprika"
+            android:id="@+id/viewImagePaprika-14"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_paprika"
@@ -206,6 +234,8 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="14"
+            android:onClick="onClick"
             />
 
 
@@ -225,7 +255,7 @@
         android:layout_marginTop="5dp">
 
         <ImageView
-            android:id="@+id/viewImagePeas"
+            android:id="@+id/viewImagePeas-15"
             android:layout_width="130dp"
             android:layout_height="141dp"
             android:src="@drawable/ci_peas"
@@ -233,6 +263,8 @@
             android:padding="10dp"
             android:layout_column="1"
             android:layout_weight="1"
+            android:tag="15"
+            android:onClick="onClick"
             />
         <ImageView
             android:id="@+id/viewImageBlank1"

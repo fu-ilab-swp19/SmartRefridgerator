@@ -30,6 +30,13 @@ public class ChooseItemTypeActivity extends AppCompatActivity implements View.On
                 myIntent.putExtra("scanGoal",2);
                 startActivity(myIntent);
                 break;
+            default:
+
+                Intent addItemIntent = new Intent(getBaseContext(), AddItemActivity.class);
+                addItemIntent.putExtra("scanResult",view.getTag().toString());
+                startActivity(addItemIntent);
+
+             break;
         }
     }
 }
