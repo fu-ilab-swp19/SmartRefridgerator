@@ -128,6 +128,10 @@ public class MainActivity extends AppCompatActivity
             myIntent.putExtra("listType",3);
             startActivity(myIntent);
 
+        }else if (id == R.id.nav_buy_list) {
+            Intent myIntent = new Intent(getBaseContext(),   BuyListActivity.class);
+            startActivity(myIntent);
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

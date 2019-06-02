@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:weightSum="1"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="10px"
+    android:paddingBottom="20px"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="wrap_content"
+        android:background="#005d53"
+        >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/producticon" />
+
+        <TextView
+            android:id="@+id/buyListItemName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#ffff"
+            android:layout_gravity="center_vertical"
+            android:textSize="18dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="5px"
+            android:layout_weight="0.1"
+            app:srcCompat="@drawable/amount" />
+
+        <TextView
+            android:id="@+id/buyListItemAmount"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.1"
+            app:srcCompat="@drawable/date" />
+
+        <TextView
+            android:id="@+id/buyListItemRemindereDate"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="50px"
+            android:layout_height="100px"
+            android:padding="10px"
+            android:layout_weight="0.05"
+            android:background="#005d53"
+            android:layout_marginLeft="30px"
+            app:srcCompat="@drawable/delete" />
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
