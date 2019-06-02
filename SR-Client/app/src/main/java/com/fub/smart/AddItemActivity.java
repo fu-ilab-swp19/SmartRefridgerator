@@ -84,8 +84,8 @@ public class AddItemActivity extends AppCompatActivity {
     }
 
     private void showDate(int year, int month, int day) {
-        expireDate.setText(new StringBuilder().append(day).append("/")
-                .append(month).append("/").append(year));
+        expireDate.setText(new StringBuilder().append(year).append("-")
+                .append(month).append("-").append(day));
     }
 
     @SuppressWarnings("deprecation")

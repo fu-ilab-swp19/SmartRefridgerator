@@ -93,7 +93,9 @@ module.exports={
             include: [{ model: Product}],
             where:{amount:{ [op.ne]: null },UserId:req.params.userId}
         }).then(result => {
-             res.json(result)
+
+             var finalResult={result:"success",products:result};
+             res.json(finalResult);
  
         });
     },
@@ -111,7 +113,8 @@ module.exports={
                 UserId:req.params.userId
             }
         }).then(result => {
-             res.json(result)
+            var finalResult={result:"success",products:result};
+            res.json(finalResult);
  
         });
 
@@ -137,7 +140,8 @@ module.exports={
 
            }
         }).then(result => {
-             res.json(result)
+            var finalResult={result:"success",products:result};
+            res.json(finalResult);
  
         });
    
