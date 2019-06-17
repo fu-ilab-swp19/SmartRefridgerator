@@ -5,17 +5,18 @@ public class BuyListItem {
     private String itemId;
     private String itemName;
     private String itemReminderDate;
-    private String itemAmount;
+   // private String itemAmount;
+
 
     public BuyListItem(){
 
     }
 
-    public BuyListItem(String itemId, String itemName, String itemReminderDate, String itemAmount) {
+    public BuyListItem(String itemId, String itemName, String itemReminderDate) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemReminderDate = itemReminderDate;
-        this.itemAmount = itemAmount;
+
     }
 
     public String getItemId() {
@@ -42,11 +43,5 @@ public class BuyListItem {
         this.itemReminderDate = itemReminderDate;
     }
 
-    public String getItemAmount() {
-        return itemAmount;
-    }
 
-    public void setItemAmount(String itemAmount) {
-        this.itemAmount = itemAmount;
-    }
 }

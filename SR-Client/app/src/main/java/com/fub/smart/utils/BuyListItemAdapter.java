@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fub.smart.R;
@@ -34,7 +35,7 @@ public class BuyListItemAdapter extends RecyclerView.Adapter  {
         BuyListItem data=(BuyListItem)buyListItemDataList.get(i);
         myViewHolder.name.setText(data.getItemName());
         myViewHolder.reminderDate.setText(String.valueOf(data.getItemReminderDate()));
-        myViewHolder.amount.setText(data.getItemAmount());
+        myViewHolder.imageViewDeleteItem.setTag(data.getItemId());
 
     }
 
@@ -44,12 +45,14 @@ public class BuyListItemAdapter extends RecyclerView.Adapter  {
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView name,reminderDate,amount;
+        TextView name,reminderDate;
+        ImageView imageViewDeleteItem;
         public MyViewHolder(View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.buyListItemName);
             reminderDate=itemView.findViewById(R.id.buyListItemRemindereDate);
-            amount=itemView.findViewById(R.id.buyListItemAmount);
+            imageViewDeleteItem=itemView.findViewById(R.id.imageViewDeleteItem);
+
         }
     }
 }

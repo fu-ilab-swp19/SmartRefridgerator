@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fub.smart.R;
@@ -37,6 +39,7 @@ public class ItemAdapter extends RecyclerView.Adapter  {
         myViewHolder.shelf.setText(String.valueOf(data.getItemShelf()));
         myViewHolder.desc.setText(data.getItemDesc());
         myViewHolder.expireDate.setText(data.getItemExpireDate());
+        myViewHolder.itemAddBuylist.setTag(data.getItemId());
 
     }
 
@@ -47,6 +50,7 @@ public class ItemAdapter extends RecyclerView.Adapter  {
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name,brand,amount,shelf,expireDate,desc;
+        ImageView itemAddBuylist;
         public MyViewHolder(View itemView) {
             super(itemView);
             name=itemView.findViewById(R.id.itemName);
@@ -55,6 +59,7 @@ public class ItemAdapter extends RecyclerView.Adapter  {
             shelf=itemView.findViewById(R.id.itemShelf);
             expireDate= itemView.findViewById(R.id.itemExpireDate);
             desc=itemView.findViewById(R.id.itemDesc);
+            itemAddBuylist=itemView.findViewById(R.id.itemAddBuylist);
         }
     }
 }

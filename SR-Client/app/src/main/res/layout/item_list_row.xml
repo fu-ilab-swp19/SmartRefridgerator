@@ -137,15 +137,18 @@
         android:weightSum="1"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp">
+
         <ImageView
-            android:id="@+id/imageButton"
+            android:id="@+id/itemAddBuylist"
             android:layout_width="50px"
             android:layout_height="100px"
             android:padding="10px"
             android:layout_weight="0.05"
             android:background="#005d53"
             android:layout_marginLeft="30px"
-            app:srcCompat="@drawable/basket" />
+            app:srcCompat="@drawable/basket"
+            android:tag=""
+            android:onClick="addToBuylist"/>
 
         <ImageView
             android:id="@+id/imageView8"
