@@ -35,12 +35,15 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
 // if you don't want to use DNS (and reduce your sketch size)
 // use the numeric IP instead of the name for the server:
-IPAddress server(192,168,178,115);  // numeric IP for Google (no DNS)
+IPAddress server(192,168,43,188);  // numeric IP for Google (no DNS)
 //char server[] = "www.google.com";    // name address for Google (using DNS)
 
 // Set the static IP address to use if the DHCP fails to assign
-IPAddress ip(192, 168, 178, 20);
-IPAddress myDns(192, 168, 178, 1);
+//IPAddress ip(192, 168, 178, 20);
+//IPAddress myDns(192, 168, 178, 1);
+IPAddress ip(192,168,43,1);
+IPAddress myDns(192,168,43,188);
+
 
 // Initialize the Ethernet client library
 // with the IP address and port of the server
@@ -54,7 +57,10 @@ bool printWebData = true;  // set to false for better speed measurement
 
 /* LOAD CELL */
 // (dt pin, sck pin)  --  (orange, red)
-HX711_ADC LoadCell(4,5);
+HX711_ADC LoadCellRO(4,5);
+HX711_ADC LoadCellBW(5,6);  // black white power
+
+HX711_ADC load_cells[2] = {LoadCellRO, LoadCellBW};
 
 long t;
 float current, last, last_sent;
@@ -109,9 +115,9 @@ void setup() {
 
   Serial.println();
   Serial.println("Starting Loadcell...");
-  LoadCell.begin();
+  LoadCellRO.begin();
   long stabilizingtime = 2000;
-  LoadCell.start(stabilizingtime);
+  LoadCellRO.start(stabilizingtime);
 
   if (LoadCell.getTareTimeoutFlag())
   {
@@ -149,13 +155,13 @@ void loop() {
 
 void updateWeight()
 {
-  LoadCell.update();
+  LoadCellRO.update();
 
   // smoothing the values
   if (millis() > t + 1000)
   {
-    current = LoadCell.getData();
-    Serial.print("LoadCell measured value: ");
+    current = LoadCellRO.getData();
+    Serial.print("LoadCellRO measured value: ");
     Serial.print(current);
     Serial.println("g");
     t = millis();
@@ -170,10 +176,10 @@ void updateWeight()
   if (Serial.available() > 0) {
     float i;
     char inByte = Serial.read();
-    if (inByte == 't') LoadCell.tareNoDelay();
+    if (inByte == 't') LoadCellRO.tareNoDelay();
   }
      //check if last tare operation is complete
-  if (LoadCell.getTareStatus() == true) {
+  if (LoadCellRO.getTareStatus() == true) {
     Serial.println("Tare complete");
   }
   
