@@ -1,5 +1,6 @@
 package com.fub.smart;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -16,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.fub.smart.models.Item;
+import com.fub.smart.utils.Environment;
 import com.fub.smart.utils.ItemAdapter;
 import com.fub.smart.utils.SmartRefrigerator;
 
@@ -112,7 +115,8 @@ public class DisplayItemsActivity extends AppCompatActivity {
 
         for (int i = 0; i < products.length(); i++) {
             try {
-                Item item = new Item(products.getJSONObject(i).getInt("id") + "",
+                Item item = new Item(
+                        products.getJSONObject(i).getJSONObject("Product").getLong("id") + "",
                         products.getJSONObject(i).getJSONObject("Product").getString("name"),
                         products.getJSONObject(i).getJSONObject("Product").getString("brand"),
                         products.getJSONObject(i).getInt("amount") + "",
@@ -125,6 +129,43 @@ public class DisplayItemsActivity extends AppCompatActivity {
             }
         }
         itemAdapter.notifyDataSetChanged();
+
+    }
+
+    public void addToBuylist(View v){
+
+        String URL = Environment.SERVER_URL + "buylist/add";
+        JSONObject jsonBody = new JSONObject();
+        try {
+            jsonBody.put("productId", v.getTag());
+            jsonBody.put("userId", getUserId());
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+                    URL, jsonBody, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+
+                    try {
+                        if(response.getString("result").equals("success")) {
+
+                            Toast.makeText(DisplayItemsActivity.this, response.getString("msg"), Toast.LENGTH_LONG).show();
+
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.e("Error: ", error.getMessage());
+                }
+            });
+
+            SmartRefrigerator.getInstance().addToRequestQueue(jsonObjReq, "signUpRequest");
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 }
