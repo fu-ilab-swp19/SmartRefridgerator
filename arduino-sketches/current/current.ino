@@ -12,18 +12,16 @@
 
 #include <SPI.h>
 #include <Ethernet.h>
-
 #include <HX711_ADC.h>
-
 #include <Wire.h>
 #include <BH1750.h>
-
 #include <math.h>
-
 #include <TimedAction.h>
 
-#define NUM_LOADCELLS 2
-#define LIGHT_SENSOR_DELAY 1000
+
+#define NUM_LOADCELLS 2         // num of connected loadcells
+#define LIGHT_SENSOR_DELAY 1000 // default interval for light sensor (in ms)
+#define INBETWEEN_WEIGHT_SENSOR_DELAY 50  // default interval between each weight sensor (in ms)
 
 void updateLight();
 void updateWeight(int);
@@ -38,39 +36,35 @@ int delayval;
 // Newer Ethernet shields have a MAC address printed on a sticker on the shield
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
-// if you don't want to use DNS (and reduce your sketch size)
-// use the numeric IP instead of the name for the server:
-
 /* SERVER ADDRESS HIER EINTRAGEN */
-IPAddress server(192,168,43,190);  // numeric IP for Google (no DNS)
-//char server[] = "www.google.com";    // name address for Google (using DNS)
+IPAddress server(192,168,43,190);  // address of npm server(/host device)
+int port = 3000;                 
 
 // Set the static IP address to use if the DHCP fails to assign
 IPAddress ip(192, 168, 178, 20);
-IPAddress myDns(192, 168, 178, 1);
+IPAddress myDns(192, 168, 178, 1); // default values for my FritzBox
 
-IPAddress ip(192, 168, 43, 189);
-IPAddress myDns(192, 168, 43, 1);
+//IPAddress ip(192, 168, 43, 189);
+//IPAddress myDns(192, 168, 43, 1); // default values for Wessams Laptop
 
-// Initialize the Ethernet client library
-// with the IP address and port of the server
-// that you want to connect to (port 80 is default for HTTP):
 EthernetClient client;
 
-// Variables to measure the speed
+// Variables to measure the throughput (ethernet)
+// TODO: DELETE THIS?
 unsigned long beginMicros, endMicros;
 unsigned long byteCount = 0;
 bool printWebData = true;  // set to false for better speed measurement
 
 /* LOAD CELL */
-// (dt pin, sck pin)  --  (orange, red)
-//                        (gray, black)
+// (dt pin, sck pin)  
+// (4     , 5      ) --  (orange, red)
+// (2     , 3      ) --  (gray, white) ? not sure, please check
 HX711_ADC load_cell_1(4,5);
 HX711_ADC load_cell_2(2,3);
 
 HX711_ADC load_cells[NUM_LOADCELLS] = {load_cell_1, load_cell_2};
 
-
+// time in ms to smooth the value, may want to delete this
 long t;
 float current[NUM_LOADCELLS], last[NUM_LOADCELLS], last_sent[NUM_LOADCELLS];
 
@@ -80,20 +74,27 @@ BH1750 lightMeter;
 float lux;
 
 /* TIMED ACTION Pseudothread */
+// Allows light to be read with a different delay than the weight sensor
+// Otherwise (for unknown reasons) the lightMeter would read the light
+// 3 times in between each weight-read (although it was sequential)
 TimedAction timedLightMeter = TimedAction(LIGHT_SENSOR_DELAY, updateLight);
 
+
+// main setup function -- initialisation of objects and variables
 void setup() {
   delayval = 1000;
-  delay(1000);
-  // You can use Ethernet.init(pin) to configure the CS pin
-  Ethernet.init(10);  // Most Arduino shields
+  delay(delayval);
 
-  // Open serial communications and wait for port to open:
+  // Used to configure the Ethernet-Shield Pin
+  Ethernet.init(10);  
+
+  // read serial port in interval of 9600 baud
   Serial.begin(9600);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
 
+  // TODO: MAYBE DEFINE THIS AS EXTRA FUNCTION?
   // start the Ethernet connection:
   Serial.println("Initialize Ethernet with DHCP:");
 
@@ -118,10 +119,12 @@ void setup() {
   
 
   /* LOAD CELL */
-
+  // calibration value may be gotten from the calibration program found unter
+  // file > examples > HX711_ADC > calibration
   float calibrationValue;
   calibrationValue = 391.86;
 
+  // TODO: MAYBE DEFINE THIS AS EXTRA FUNCTION?
   Serial.println();
   Serial.println("Starting Loadcells...");
   for (int i = 0; i < NUM_LOADCELLS; i++) {
@@ -141,9 +144,9 @@ void setup() {
 
   }
   
+  // initialise lightMeter
   Wire.begin();
   lightMeter.begin();
-  // to initialise lux because the light update in the main loop is delayed()
   lux = lightMeter.readLightLevel();
 
   Serial.println("BH1750 initialized");
@@ -151,13 +154,14 @@ void setup() {
 
 void loop() 
 {
+  // TODO: mixed up the delay values while testing, cleanup would be great
   timedLightMeter.check();
   
     if (lux > 5)
     {
       for (int i = 0; i < NUM_LOADCELLS; i++) {
         updateWeight(i);
-        delay(50);
+        delay(INBETWEEN_WEIGHT_SENSOR_DELAY);
       }
       delayval = 10;
     } else {
@@ -180,6 +184,7 @@ void updateWeight(int i)
   load_cells[i].update();
 
   // smoothing the values
+  // TODO: DELETE THIS ? (smoothing)
   if (millis() > t + 1000)
   {
     current[i] = load_cells[i].getData();
@@ -189,9 +194,13 @@ void updateWeight(int i)
     Serial.print(current[i]);
     Serial.println("g");
     t = millis();
+    
+    // compare currently read value with last read value
+    // as soon as the value converges and was not sent already > send to server
     if ((round(current[i] - last[i]) == 0) && (abs(current[i] - last_sent[i]) > 5))
     {
       connectToServer(i);
+      // TODO: DELETE receiveFromServer()? copy paste function
       receiveFromServer();
       last_sent[i] = current[i];
     }
@@ -200,6 +209,7 @@ void updateWeight(int i)
   if (Serial.available() > 0) {
     float i;
     char inByte = Serial.read();
+    // TODO: disabled this for testing, enabling it should be fine
     //if (inByte == 't') 
       //load_cells[i].tareNoDelay();
   }
@@ -208,6 +218,7 @@ void updateWeight(int i)
     Serial.println("Tare complete");
   }
   
+  // set last to current, for next iteration
   last[i] = current[i];
 }
 
@@ -225,8 +236,8 @@ void connectToServer(int load_cell_id)
     client.print("GET /api/addproduct/controller/");
     client.print(load_cell_id + 1);
     client.print("/");
-     // TODO Indizierung richtig machen
     client.print(abs(current[load_cell_id]));
+    // TODO: change to HTTP/2?
     client.println(" HTTP/1.1");
     //client.println("Host: ");
     client.println("Connection: close");
@@ -276,9 +287,4 @@ void receiveFromServer()
     }
   }
   delay(500);
-}
-
-void sendWeight()
-{
-  
 }
