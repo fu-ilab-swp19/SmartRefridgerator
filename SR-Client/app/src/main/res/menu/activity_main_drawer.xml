@@ -10,27 +10,27 @@
             android:title="Dashboard" />
         <item
             android:id="@+id/nav_add_product"
-            android:icon="@drawable/ic_menu_add"
+            android:icon="@drawable/ic_menu_dashboard"
             android:title="Define Product" />
         <item
             android:id="@+id/nav_add_item_fridge"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_dashboard"
             android:title="Add Item to Fridge " />
         <item
             android:id="@+id/nav_display_all"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_dashboard"
             android:title="Display all items" />
         <item
             android:id="@+id/nav_items_expiration"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_dashboard"
             android:title="Close to Expiry " />
         <item
             android:id="@+id/nav_items_out_stock"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_dashboard"
             android:title="Soon out of stock  " />
         <item
             android:id="@+id/nav_buy_list"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_menu_dashboard"
             android:title="Buy List " />
     </group>
 

@@ -161,7 +161,7 @@ public class DisplayItemsActivity extends AppCompatActivity {
                 }
             });
 
-            SmartRefrigerator.getInstance().addToRequestQueue(jsonObjReq, "signUpRequest");
+            SmartRefrigerator.getInstance().addToRequestQueue(jsonObjReq, "addToBuylistRequest");
 
         } catch (JSONException e) {
             e.printStackTrace();

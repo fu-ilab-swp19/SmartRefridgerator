@@ -1,10 +1,13 @@
 package com.fub.smart;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,11 +18,24 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.fub.smart.utils.SmartRefrigerator;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    TextView allProducts,outProducts,expiredPRoducts,buyListProducts;
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +58,78 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        //sdsd
 
+        allProducts=findViewById(R.id.textViewDashboardAllItems);
+        outProducts=findViewById(R.id.textViewDashboardOutStock);
+        expiredPRoducts=findViewById(R.id.textViewDashboardNearExpiration);
+        buyListProducts=findViewById(R.id.textViewDashboardBuylist);
+        updateToken();
+        getStatistics();
+
+    }
+    private void updateToken(){
+        String serviceUrl =   serviceUrl = "user/token/" + getUserId();
+
+
+
+        String URL = com.fub.smart.utils.Environment.SERVER_URL + serviceUrl;
+        try {
+            JSONObject jsonObject=new JSONObject();
+            jsonObject.put("token",getToken());
+
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+                    URL, jsonObject, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+
+                    Log.e("token","token updated");
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.e("Error: ", error.getMessage());
+                }
+            });
+
+            SmartRefrigerator.getInstance().addToRequestQueue(jsonObjReq, "getProductRequest");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getStatistics(){
+        String serviceUrl =   serviceUrl = "user/statistics/" + getUserId();
+
+
+
+        String URL = com.fub.smart.utils.Environment.SERVER_URL + serviceUrl;
+        try {
+
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
+                    URL, null, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+
+                    try {
+                       allProducts.setText(response.getString("all"));
+                       outProducts.setText(response.getString("out"));
+                       expiredPRoducts.setText(response.getString("expired"));
+                       buyListProducts.setText(response.getString("buylist"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    VolleyLog.e("Error: ", error.getMessage());
+                }
+            });
+
+            SmartRefrigerator.getInstance().addToRequestQueue(jsonObjReq, "getProductRequest");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -88,7 +174,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent myIntent = new Intent(getBaseContext(),   SettingsActivity.class);
+            startActivity(myIntent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -138,6 +225,18 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    private int getUserId() {
+        SharedPreferences saved_values = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        return saved_values.getInt("userId", -1);
+
+    }
+
+    private String getToken(){
+        SharedPreferences saved_values = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        return saved_values.getString("token", "");
+
+    }
+
 
 
 

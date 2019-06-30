@@ -4,6 +4,7 @@
 const productController=require('../controllers').productController
 const notificationController=require('../controllers').notificationController
 const userController=require('../controllers').userController
+const buylistController=require('../controllers').buylistController
 
 module.exports = (app)=>{
   app.get('/api', (req, res) => res.status(200).send({
@@ -27,8 +28,18 @@ module.exports = (app)=>{
   //user api
   app.post('/api/user',userController.registerUser);
   app.post('/api/user/authenticate',userController.authenticate);
-
+  app.get('/api/user/productOutNoti/:userId',userController.manageProductOutNotification);
+  app.post('/api/user/productOutNoti/:userId',userController.manageProductOutNotification);
+  app.get('/api/user/statistics/:userId',userController.statistics);
+  app.post('/api/user/token/:userId',userController.updateToken);
   //notification api
   app.get('/api/notification',notificationController.test);
+
+
+  //buy list api
+  app.post('/api/buylist/add',buylistController.addToBuylist);
+  app.post('/api/buylist/delete',buylistController.deleteFromBuylist);
+  app.get('/api/buylist/:userId',buylistController.getAllitems);
+
 
 };

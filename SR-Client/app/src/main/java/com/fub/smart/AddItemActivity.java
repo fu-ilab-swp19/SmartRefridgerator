@@ -137,6 +137,8 @@ public class AddItemActivity extends AppCompatActivity {
                             productDescription.setText(response.getJSONObject("product").getString("description"));
                             productBrand.setText(response.getJSONObject("product").getString("brand"));
                         } else {
+                            Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
+                            startActivity(myIntent);
                             Toast.makeText(AddItemActivity.this, response.getString("msg"), Toast.LENGTH_LONG).show();
                         }
                     } catch (JSONException e) {
@@ -188,6 +190,7 @@ public class AddItemActivity extends AppCompatActivity {
                             startActivity(myIntent);
                         }
                         else {
+
                             Toast.makeText(AddItemActivity.this, response.getString("msg"), Toast.LENGTH_LONG).show();
                         }
                     } catch (JSONException e) {

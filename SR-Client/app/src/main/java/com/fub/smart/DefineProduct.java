@@ -97,8 +97,11 @@ public class DefineProduct extends AppCompatActivity {
                         if(response.getString("result").equals("success")) {
                             Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
                             startActivity(myIntent);
+                            Toast.makeText(DefineProduct.this, response.getString("msg"), Toast.LENGTH_LONG).show();
                         }
                         else {
+                            Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
+                            startActivity(myIntent);
                             Toast.makeText(DefineProduct.this, response.getString("msg"), Toast.LENGTH_LONG).show();
                         }
                     } catch (JSONException e) {
